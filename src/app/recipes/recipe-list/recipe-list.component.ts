@@ -7,6 +7,7 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent implements OnInit {
+  // type Recipe[] means array of Class Recipe, which was import from src\app\recipes\recipe.model.ts as declare above
   recipes: Recipe[] = [
     new Recipe(
       'Test Recipe',
@@ -19,7 +20,7 @@ export class RecipeListComponent implements OnInit {
       'https://i1.wp.com/www.frugelegance.com/wp-content/uploads/2015/04/HumBirdCakeBundt6.jpg'
     ),
   ];
-  // type Recipe[] menas array of Class Recipe, which was import from src\app\recipes\recipe.model.ts as declare above
+
   constructor() {}
 
   ngOnInit(): void {}
