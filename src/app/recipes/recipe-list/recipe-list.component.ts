@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent implements OnInit {
+  @Output() recipeSelectedRl = new EventEmitter<Recipe>();
   // type Recipe[] means array of Class Recipe, which was import from src\app\recipes\recipe.model.ts as declare above
   recipes: Recipe[] = [
     new Recipe(
@@ -24,4 +25,7 @@ export class RecipeListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  onSelected(recipe: Recipe) {
+    this.recipeSelectedRl.emit(recipe);
+  }
 }
