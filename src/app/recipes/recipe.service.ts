@@ -1,11 +1,10 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Ingredients } from "../shared/ingredient.model";
 import { shoppingListService } from "../shopping-list/shopping-list.service";
 import { Recipe } from "./recipe.model";
 
 @Injectable()
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
 
     // type Recipe[] means array of Class Recipe, which was import from src\app\recipes\recipe.model.ts as declare above
     private recipes: Recipe[] = [
