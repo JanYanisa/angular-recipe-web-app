@@ -1,7 +1,10 @@
+import { EventEmitter } from "@angular/core";
 import { Recipe } from "./recipe.model";
 export class RecipeService {
+    recipeSelected = new EventEmitter<Recipe>();
+
     // type Recipe[] means array of Class Recipe, which was import from src\app\recipes\recipe.model.ts as declare above
-  private recipes: Recipe[] = [
+    private recipes: Recipe[] = [
     new Recipe(
       'Test Recipe',
       'Test description for Test Recipe',
