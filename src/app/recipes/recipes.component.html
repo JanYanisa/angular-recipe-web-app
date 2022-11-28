@@ -5,10 +5,7 @@
     ></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <router-outlet *ngIf="selectedRecipe; else infoText"
-    [recipe]="selectedRecipe"></router-outlet>
-    <ng-template #infoText>
-      <p>Please select a Recipe!</p>
-    </ng-template>
+    <router-outlet
+    ></router-outlet>
   </div>
 </div>
